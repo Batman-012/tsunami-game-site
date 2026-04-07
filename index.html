@@ -5,13 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Escape Tsunami For Cars</title>
 <style>
-  /* --- Global Styles --- */
   body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(-45deg, #0a0f1a, #001f3f, #003366, #000814);
-    background-size: 400% 400%;
-    animation: bg 15s ease infinite;
+    background: #001f3f;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -19,25 +16,9 @@
     text-align: center;
     transition: background 0.5s, color 0.3s;
   }
-  @keyframes bg {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-  }
+  h1 { margin-top: 60px; font-size: 3rem; text-shadow: 2px 2px 8px #000; }
+  p { font-size: 1.2rem; max-width: 700px; margin: 10px auto 40px; }
 
-  h1 {
-    margin-top: 60px;
-    font-size: 3rem;
-    text-shadow: 2px 2px 8px #000;
-  }
-
-  p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 10px auto 40px;
-  }
-
-  /* --- Buttons --- */
   .btn {
     display: inline-block;
     background: #ff4500;
@@ -50,12 +31,8 @@
     transition: 0.3s;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   }
-  .btn:hover {
-    background: #ff6347;
-    transform: translateY(-2px);
-  }
+  .btn:hover { background: #ff6347; transform: translateY(-2px); }
 
-  /* --- Cards --- */
   .card {
     background: rgba(255, 255, 255, 0.05);
     padding: 20px;
@@ -66,106 +43,61 @@
     backdrop-filter: blur(5px);
   }
 
-  footer {
-    margin: 50px 0 20px;
-    font-size: 0.9rem;
-    color: #aaa;
-  }
+  footer { margin: 50px 0 20px; font-size: 0.9rem; color: #aaa; }
 
-  /* --- Admin Button --- */
   #admin-btn {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-    width: 25px;
-    height: 25px;
-    background: #ff4500;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 2px solid #fff;
-    box-shadow: 0 0 5px #000;
-    transition: transform 0.2s;
+    position: fixed; bottom: 10px; left: 10px;
+    width: 25px; height: 25px; background: #ff4500;
+    border-radius: 50%; cursor: pointer; border: 2px solid #fff;
+    box-shadow: 0 0 5px #000; transition: transform 0.2s;
   }
-  #admin-btn:hover {
-    transform: scale(1.2);
-  }
+  #admin-btn:hover { transform: scale(1.2); }
 
-  /* --- Admin Panel --- */
   #admin-panel {
     display: none;
-    position: fixed;
-    bottom: 50px;
-    left: 10px;
-    background: rgba(0,0,0,0.95);
-    padding: 20px;
-    border-radius: 12px;
-    width: 350px;
-    z-index: 999;
-    color: #fff;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    position: fixed; bottom: 50px; left: 10px;
+    background: rgba(0,0,0,0.95); padding: 20px;
+    border-radius: 12px; width: 350px; z-index: 999;
+    color: #fff; box-shadow: 0 5px 20px rgba(0,0,0,0.5);
   }
   #admin-panel input[type=color], #admin-panel input[type=text] {
-    width: 100%;
-    margin: 8px 0 12px;
-    padding: 8px;
-    border-radius: 6px;
-    border: none;
+    width: 100%; margin: 8px 0 12px; padding: 8px; border-radius: 6px; border: none;
   }
   #admin-panel button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    background: #ff4500;
-    color: #fff;
-    cursor: pointer;
-    margin-bottom: 10px;
-    font-weight: bold;
-    transition: 0.3s;
+    width: 100%; padding: 10px; border: none;
+    border-radius: 8px; background: #ff4500; color: #fff;
+    cursor: pointer; margin-bottom: 10px; font-weight: bold; transition: 0.3s;
   }
-  #admin-panel button:hover {
-    background: #ff6347;
-  }
-  #admin-panel img.logo {
-    width: 80px;
-    margin: 15px auto;
-    display: block;
-    border-radius: 12px;
-    border: 2px solid #fff;
-  }
+  #admin-panel button:hover { background: #ff6347; }
 
-  #admin-settings label {
-    font-weight: bold;
-    display: block;
-    margin-top: 10px;
-  }
+  #admin-settings label { font-weight: bold; display: block; margin-top: 10px; }
+
+  #admin-settings img.logo { width: 80px; margin: 15px auto; display: block; border-radius: 12px; border: 2px solid #fff; }
 
 </style>
 </head>
 <body>
 
 <h1>Escape Tsunami For Cars 🚗🌊</h1>
-<p>Welcome to the official fan page! Play the game, join the Discord, and check out the Roblox group.</p>
+<p>Welcome! Play the game, join Discord, and check out the Roblox group.</p>
 
-<div>
+<div id="main-buttons">
   <a class="btn" href="https://www.roblox.com/games/122472681057905/Escape-Tsunami-for-Cars" target="_blank">🚗 Play Game</a>
   <a class="btn" href="https://discord.gg/xWgHww8w8z" target="_blank">💬 Join Discord</a>
   <a class="btn" href="https://www.roblox.com/communities/985768593/Escape-Tsunami-Studios#!/about" target="_blank">👥 Roblox Group</a>
 </div>
 
-<div class="card">
+<div id="cards-container" class="card">
   <h2>📝 Updates & Info</h2>
-  <p>Stay updated with the latest news on Discord or Roblox group. Admins can customize this page in real-time!</p>
+  <p>Stay updated with the latest news on Discord or Roblox group.</p>
 </div>
 
 <footer>
   &copy; 2026 Escape Tsunami Fan Page | Made by You
 </footer>
 
-<!-- Admin Button -->
 <div id="admin-btn" title="Admin"></div>
 
-<!-- Admin Panel -->
 <div id="admin-panel">
   <h3>Admin Panel 🔧</h3>
   <label>Enter Code:</label>
@@ -174,7 +106,7 @@
 
   <div id="admin-settings" style="display:none;">
     <img class="logo" src="https://www.roblox.com/favicon.ico" alt="Roblox Logo">
-    
+
     <label>Background Color:</label>
     <input type="color" id="bg-color" value="#001f3f">
     <button id="apply-bg">Apply Background</button>
@@ -190,6 +122,12 @@
     <label>Banner Text:</label>
     <input type="text" id="banner-text" placeholder="Type new banner text">
     <button id="apply-banner">Apply Banner</button>
+
+    <label>New Card Title:</label>
+    <input type="text" id="card-title" placeholder="Card Title">
+    <label>New Card Text:</label>
+    <input type="text" id="card-text" placeholder="Card Text">
+    <button id="add-card">Add New Card</button>
   </div>
 </div>
 
@@ -199,10 +137,15 @@
   const loginBtn = document.getElementById('admin-login');
   const codeInput = document.getElementById('admin-code');
   const adminSettings = document.getElementById('admin-settings');
+
   const bgInput = document.getElementById('bg-color');
   const textInput = document.getElementById('text-color');
   const btnInput = document.getElementById('btn-color');
   const bannerInput = document.getElementById('banner-text');
+
+  const cardTitle = document.getElementById('card-title');
+  const cardText = document.getElementById('card-text');
+  const cardsContainer = document.getElementById('cards-container');
 
   // Toggle admin panel
   adminBtn.onclick = () => {
@@ -237,8 +180,21 @@
 
   // Apply banner text
   document.getElementById('apply-banner').onclick = () => {
-    const h1 = document.querySelector('h1');
-    h1.textContent = bannerInput.value || 'Escape Tsunami For Cars 🚗🌊';
+    document.querySelector('h1').textContent = bannerInput.value || 'Escape Tsunami For Cars 🚗🌊';
+  }
+
+  // Add new card
+  document.getElementById('add-card').onclick = () => {
+    if(cardTitle.value && cardText.value) {
+      const newCard = document.createElement('div');
+      newCard.classList.add('card');
+      newCard.innerHTML = `<h2>${cardTitle.value}</h2><p>${cardText.value}</p>`;
+      cardsContainer.parentNode.insertBefore(newCard, cardsContainer.nextSibling);
+      cardTitle.value = '';
+      cardText.value = '';
+    } else {
+      alert('Please fill both title and text!');
+    }
   }
 </script>
 
