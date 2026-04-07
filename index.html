@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Escape Tsunami For Cars</title>
 <style>
+  /* --- Global Styles --- */
   body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -23,15 +24,60 @@
     50% {background-position: 100% 50%;}
     100% {background-position: 0% 50%;}
   }
-  h1 { margin-top: 50px; font-size: 3rem; text-shadow: 2px 2px 8px #000; }
-  p { font-size: 1.2rem; max-width: 700px; margin: 10px auto 40px; }
-  .btn { display: inline-block; background: #ff4500; color: #fff; padding: 15px 30px; margin: 10px; font-size: 1.2rem; border-radius: 12px; text-decoration: none; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
-  .btn:hover { background: #ff6347; transform: translateY(-3px); }
-  .card { background: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 15px; margin: 20px; max-width: 800px; box-shadow: 0 5px 20px rgba(0,0,0,0.4); backdrop-filter: blur(5px); }
-  iframe { border-radius: 12px; margin-top: 10px; }
-  footer { margin: 50px 0 20px; font-size: 0.9rem; color: #aaa; }
 
-  /* 🌟 Admin knopje linksonder */
+  h1 {
+    margin-top: 60px;
+    font-size: 3rem;
+    text-shadow: 2px 2px 8px #000;
+  }
+
+  p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 10px auto 40px;
+  }
+
+  /* --- Buttons --- */
+  .btn {
+    display: inline-block;
+    background: #ff4500;
+    color: #fff;
+    padding: 12px 28px;
+    margin: 10px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  .btn:hover {
+    background: #ff6347;
+    transform: translateY(-2px);
+  }
+
+  /* --- Cards --- */
+  .card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px;
+    max-width: 800px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+  }
+
+  iframe {
+    border-radius: 12px;
+    margin-top: 10px;
+  }
+
+  footer {
+    margin: 50px 0 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+
+  /* --- Admin Button --- */
   #admin-btn {
     position: fixed;
     bottom: 10px;
@@ -45,70 +91,81 @@
     box-shadow: 0 0 5px #000;
   }
 
-  /* Admin panel */
+  /* --- Admin Panel --- */
   #admin-panel {
     display: none;
     position: fixed;
     bottom: 50px;
     left: 10px;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.95);
     padding: 20px;
     border-radius: 12px;
-    width: 300px;
+    width: 320px;
     z-index: 999;
+    color: #fff;
   }
   #admin-panel input[type=color], #admin-panel input[type=text] {
     width: 100%;
-    margin: 5px 0 15px;
-    padding: 5px;
-    border-radius: 5px;
+    margin: 8px 0 15px;
+    padding: 6px;
+    border-radius: 6px;
     border: none;
   }
-  #admin-panel button { width: 100%; padding: 10px; border: none; border-radius: 8px; background: #ff4500; color: #fff; cursor: pointer; margin-bottom: 10px; }
+  #admin-panel button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #ff4500;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
   #admin-panel button:hover { background: #ff6347; }
   #admin-panel img { width: 50px; display: block; margin: 10px auto; }
+
 </style>
 </head>
 <body>
 
 <h1>Escape Tsunami For Cars 🚗🌊</h1>
-<p>Welkom op de officiële fanpagina van <strong>Escape Tsunami For Cars</strong>! Speel het spel, join de Discord en word lid van de Roblox groep. Alles wat je nodig hebt is hier!</p>
+<p>Welcome to the official fan page of <strong>Escape Tsunami For Cars</strong>! Play the game, join the Discord, and become a member of the Roblox group. Everything you need is right here!</p>
 
 <div>
-  <a class="btn" href="https://www.roblox.com/games/122472681057905/Escape-Tsunami-for-Cars" target="_blank">🚗 PLAY GAME</a>
-  <a class="btn" href="https://discord.gg/xWgHww8w8z" target="_blank">💬 JOIN DISCORD</a>
-  <a class="btn" href="https://www.roblox.com/communities/985768593/Escape-Tsunami-Studios#!/about" target="_blank">👥 ROBLOX GROUP</a>
+  <a class="btn" href="https://www.roblox.com/games/122472681057905/Escape-Tsunami-for-Cars" target="_blank">🚗 Play Game</a>
+  <a class="btn" href="https://discord.gg/xWgHww8w8z" target="_blank">💬 Join Discord</a>
+  <a class="btn" href="https://www.roblox.com/communities/985768593/Escape-Tsunami-Studios#!/about" target="_blank">👥 Roblox Group</a>
 </div>
 
 <div class="card">
   <h2>🎥 Gameplay</h2>
   <iframe width="100%" height="400" src="https://www.youtube.com/embed/" allowfullscreen></iframe>
-  <p>Bekijk de spannendste momenten van Escape Tsunami For Cars!</p>
+  <p>Check out the most thrilling moments of Escape Tsunami For Cars!</p>
 </div>
 
 <div class="card">
   <h2>📝 Updates & Info</h2>
-  <p>Volg de nieuwste updates in de Discord of check de Roblox groep voor events en nieuwe features!</p>
+  <p>Stay updated with the latest game news on Discord or check the Roblox group for events and new features!</p>
 </div>
 
 <footer>
-  &copy; 2026 Escape Tsunami Fansite | Made by You
+  &copy; 2026 Escape Tsunami Fan Page | Made by You
 </footer>
 
-<!-- Admin knop -->
-<div id="admin-btn"></div>
+<!-- Admin Button -->
+<div id="admin-btn" title="Admin"></div>
 
-<!-- Admin panel -->
+<!-- Admin Panel -->
 <div id="admin-panel">
   <h3>Admin Panel 🔧</h3>
-  <label>Voer code in:</label>
-  <input type="text" id="admin-code" placeholder="Code hier...">
+  <label>Enter Code:</label>
+  <input type="text" id="admin-code" placeholder="Enter code here...">
   <button id="admin-login">Login</button>
 
   <div id="admin-settings" style="display:none;">
-    <label>Achtergrond kleur:</label>
+    <label>Background Color:</label>
     <input type="color" id="bg-color" value="#001f3f">
-    <button id="apply-bg">Pas toe</button>
+    <button id="apply-bg">Apply</button>
 
     <img src="https://www.roblox.com/favicon.ico" alt="Roblox Logo">
     <iframe width="100%" height="150" src="https://www.youtube.com/embed/" allowfullscreen></iframe>
@@ -123,17 +180,22 @@
   const adminSettings = document.getElementById('admin-settings');
   const bgInput = document.getElementById('bg-color');
 
-  adminBtn.onclick = () => { adminPanel.style.display = adminPanel.style.display === 'block' ? 'none' : 'block'; }
+  // Toggle admin panel
+  adminBtn.onclick = () => {
+    adminPanel.style.display = adminPanel.style.display === 'block' ? 'none' : 'block';
+  }
 
+  // Admin login
   loginBtn.onclick = () => {
     if(codeInput.value === "Escape2026!") {
       adminSettings.style.display = 'block';
-      alert('Admin ingelogd!');
+      alert('Admin logged in!');
     } else {
-      alert('Foute code!');
+      alert('Incorrect code!');
     }
   }
 
+  // Apply background color
   document.getElementById('apply-bg').onclick = () => {
     document.body.style.background = bgInput.value;
   }
