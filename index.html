@@ -17,7 +17,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    transition: background 0.5s;
+    transition: background 0.5s, color 0.3s;
   }
   @keyframes bg {
     0% {background-position: 0% 50%;}
@@ -66,11 +66,6 @@
     backdrop-filter: blur(5px);
   }
 
-  iframe {
-    border-radius: 12px;
-    margin-top: 10px;
-  }
-
   footer {
     margin: 50px 0 20px;
     font-size: 0.9rem;
@@ -89,6 +84,10 @@
     cursor: pointer;
     border: 2px solid #fff;
     box-shadow: 0 0 5px #000;
+    transition: transform 0.2s;
+  }
+  #admin-btn:hover {
+    transform: scale(1.2);
   }
 
   /* --- Admin Panel --- */
@@ -100,14 +99,15 @@
     background: rgba(0,0,0,0.95);
     padding: 20px;
     border-radius: 12px;
-    width: 320px;
+    width: 350px;
     z-index: 999;
     color: #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
   }
   #admin-panel input[type=color], #admin-panel input[type=text] {
     width: 100%;
-    margin: 8px 0 15px;
-    padding: 6px;
+    margin: 8px 0 12px;
+    padding: 8px;
     border-radius: 6px;
     border: none;
   }
@@ -120,16 +120,32 @@
     color: #fff;
     cursor: pointer;
     margin-bottom: 10px;
+    font-weight: bold;
+    transition: 0.3s;
   }
-  #admin-panel button:hover { background: #ff6347; }
-  #admin-panel img { width: 50px; display: block; margin: 10px auto; }
+  #admin-panel button:hover {
+    background: #ff6347;
+  }
+  #admin-panel img.logo {
+    width: 80px;
+    margin: 15px auto;
+    display: block;
+    border-radius: 12px;
+    border: 2px solid #fff;
+  }
+
+  #admin-settings label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
 
 </style>
 </head>
 <body>
 
 <h1>Escape Tsunami For Cars 🚗🌊</h1>
-<p>Welcome to the official fan page of <strong>Escape Tsunami For Cars</strong>! Play the game, join the Discord, and become a member of the Roblox group. Everything you need is right here!</p>
+<p>Welcome to the official fan page! Play the game, join the Discord, and check out the Roblox group.</p>
 
 <div>
   <a class="btn" href="https://www.roblox.com/games/122472681057905/Escape-Tsunami-for-Cars" target="_blank">🚗 Play Game</a>
@@ -138,14 +154,8 @@
 </div>
 
 <div class="card">
-  <h2>🎥 Gameplay</h2>
-  <iframe width="100%" height="400" src="https://www.youtube.com/embed/" allowfullscreen></iframe>
-  <p>Check out the most thrilling moments of Escape Tsunami For Cars!</p>
-</div>
-
-<div class="card">
   <h2>📝 Updates & Info</h2>
-  <p>Stay updated with the latest game news on Discord or check the Roblox group for events and new features!</p>
+  <p>Stay updated with the latest news on Discord or Roblox group. Admins can customize this page in real-time!</p>
 </div>
 
 <footer>
@@ -163,12 +173,23 @@
   <button id="admin-login">Login</button>
 
   <div id="admin-settings" style="display:none;">
+    <img class="logo" src="https://www.roblox.com/favicon.ico" alt="Roblox Logo">
+    
     <label>Background Color:</label>
     <input type="color" id="bg-color" value="#001f3f">
-    <button id="apply-bg">Apply</button>
+    <button id="apply-bg">Apply Background</button>
 
-    <img src="https://www.roblox.com/favicon.ico" alt="Roblox Logo">
-    <iframe width="100%" height="150" src="https://www.youtube.com/embed/" allowfullscreen></iframe>
+    <label>Text Color:</label>
+    <input type="color" id="text-color" value="#ffffff">
+    <button id="apply-text">Apply Text Color</button>
+
+    <label>Button Color:</label>
+    <input type="color" id="btn-color" value="#ff4500">
+    <button id="apply-btn">Apply Button Color</button>
+
+    <label>Banner Text:</label>
+    <input type="text" id="banner-text" placeholder="Type new banner text">
+    <button id="apply-banner">Apply Banner</button>
   </div>
 </div>
 
@@ -179,6 +200,9 @@
   const codeInput = document.getElementById('admin-code');
   const adminSettings = document.getElementById('admin-settings');
   const bgInput = document.getElementById('bg-color');
+  const textInput = document.getElementById('text-color');
+  const btnInput = document.getElementById('btn-color');
+  const bannerInput = document.getElementById('banner-text');
 
   // Toggle admin panel
   adminBtn.onclick = () => {
@@ -198,6 +222,23 @@
   // Apply background color
   document.getElementById('apply-bg').onclick = () => {
     document.body.style.background = bgInput.value;
+  }
+
+  // Apply text color
+  document.getElementById('apply-text').onclick = () => {
+    document.body.style.color = textInput.value;
+  }
+
+  // Apply button color
+  document.getElementById('apply-btn').onclick = () => {
+    const buttons = document.querySelectorAll('.btn, #admin-panel button');
+    buttons.forEach(b => b.style.background = btnInput.value);
+  }
+
+  // Apply banner text
+  document.getElementById('apply-banner').onclick = () => {
+    const h1 = document.querySelector('h1');
+    h1.textContent = bannerInput.value || 'Escape Tsunami For Cars 🚗🌊';
   }
 </script>
 
